@@ -11,4 +11,7 @@ NOTE: This is a WiP - please add/edit as you go.
 * search and replace 'django-jumpstart' to the name of your project. Both file
   contents and the folder names.
 
-* Do the same for 'DJANGO_JUMPSTART' - mostly config entries
+* Do the same for 'DJANGO_JUMPSTART' - mostly config entries.
+
+* Also rename the django project and app: 'django_jumpstart_project' and
+  'django_jumpstart_app'

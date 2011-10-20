@@ -1,0 +1,10 @@
+Install instructions for django-jumpstart
+
+== virtualenv ==
+
+Get you virtual env setup so that you have all the dependencies installed:
+
+  $ virtualenv ../django-jumpstart-virtualenv --no-site-packages
+  $ source ../django-jumpstart-virtualenv/bin/activate
+  $ pip install -r conf/requirements.txt
+

@@ -3,11 +3,19 @@
 import os
 import sys
 import logging
-import setup_env
 
 # Work out where we are to set up the paths correctly and load config
 base_dir = os.path.abspath( os.path.split(__file__)[0] + '/..' )
-# print "base_dir: " + base_dir
+print "base_dir: " + base_dir
+
+paths = (
+    os.path.normpath(base_dir + "/pylib"),
+    os.path.normpath(base_dir + "/commonlib/pylib"),
+)
+
+for path in paths:
+    if path not in sys.path:
+        sys.path.append(path)
 
 # load the mySociety config
 from mysociety import config

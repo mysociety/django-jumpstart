@@ -8,3 +8,24 @@ Get you virtual env setup so that you have all the dependencies installed:
   $ source ../django-jumpstart-virtualenv/bin/activate
   $ pip install -r conf/requirements.txt
 
+== commonlib ==
+
+Get the commonlib submodule, which contains many useful bits used across
+mySociety projects:
+
+    $ git submodule add git://git.mysociety.org/commonlib
+    $ git submodule sync
+    $ git submodule update
+
+== config ==
+
+Copy 'conf/general.yml-example' to 'conf/general.yml' and edit as needed.
+
+    $ cp conf/general.yml-example conf/general.yml
+    $ nano conf/general.yml
+
+Make sure that you put something random into DJANGO_SECRET_KEY:
+
+    $ tr -dc '[:alnum:]' < /dev/urandom | head -c${1:-64}; echo;
+
+

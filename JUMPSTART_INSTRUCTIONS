@@ -16,11 +16,5 @@ NOTE: This is a WiP - please add/edit as you go.
 * Also rename the django project and app: 'django_jumpstart_project' and
   'django_jumpstart_app'
 
-* get the commonlib submodule:
-
-    $ git submodule add git://git.mysociety.org/commonlib
-    $ git submodule sync
-    $ git submodule update
-
-
+* now go follow the normal install instructions in INSTALL
 

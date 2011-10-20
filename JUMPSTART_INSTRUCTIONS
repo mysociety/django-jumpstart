@@ -11,3 +11,4 @@ NOTE: This is a WiP - please add/edit as you go.
 * search and replace 'django-jumpstart' to the name of your project. Both file
   contents and the folder names.
 
+* Do the same for 'DJANGO_JUMPSTART' - mostly config entries

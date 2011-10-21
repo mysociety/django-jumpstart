@@ -5,6 +5,7 @@ set -e
 
 # create/update the virtual environment
 pip install \
+    -q \
     -E ../django-jumpstart-virtualenv \
     -r conf/requirements.txt
 

@@ -33,5 +33,8 @@ Make sure that you put something random into DJANGO_SECRET_KEY:
 Create your database:
 
     $ createdb -T template_postgis django-jumpstart
+    $ cd django_jumpstart_project
+    $ ./manage syncdb
+    $ ./manage migrate
 
 

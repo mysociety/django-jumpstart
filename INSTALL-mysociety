@@ -43,3 +43,6 @@ $databases = {
     },
     ...,
 };
+
+# You can copy the django-jumpstart master config files in
+# '/data/servers/vhosts/' to create ones suitable for your project.

@@ -1,0 +1,45 @@
+# These are notes specific to installing django-jumpstart on the mySociety
+# infrastructure.
+#
+# == vhosts.pl entries ==
+#
+# Add something like the following (replacing XXXX as needed):
+
+$sites->{'django-jumpstart'} = {
+    user           => 'XXXX',
+    web_dir        => 'web',
+    git_repository => 'django-jumpstart',
+    git_user       => 'anon',
+    conf_dir       => 'conf',
+    public_dirs    => [],
+    exec_extras    => {                     #
+        user => [ 'conf/post_deploy_actions.bash', ]
+    },
+};
+
+$vhosts = {
+    ...,
+    'django-jumpstart.XXXX.dev.mysociety.org' => {
+        site        => 'django-jumpstart',
+        redirects   => [],
+        staging     => 0,
+        servers     => ['fury'],
+        databases   => ['django-jumpstart-XXXX'],
+        user        => 'XXXX',
+        # backup_dirs => ['media_root'],
+    },
+    ...,
+};
+
+$databases = {
+    ...,
+    'django-jumpstart-XXXX' => {
+        prefix => 'DJANGO_JUMPSTART',
+        type   => 'psql',
+        host   => 'fury',
+        port   => '5432',
+        backup => 0,
+        geo    => 1,
+    },
+    ...,
+};

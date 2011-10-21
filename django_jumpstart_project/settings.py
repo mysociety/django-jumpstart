@@ -152,7 +152,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "django.core.context_processors.request",    
     "django.contrib.messages.context_processors.messages",
-    # "django_jumpstart_project.django_jumpstart_app.context_processors.add_settings", # FIXME - use a templatetag instead?
+    "django_jumpstart_project.django_jumpstart_app.context_processors.add_settings",
 )
 
 INSTALLED_APPS = (

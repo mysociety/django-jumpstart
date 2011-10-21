@@ -2,13 +2,10 @@ This is a temporary list of things to add to this repo before considering it
 complete. Once done please delete this file.
 
   * step by step instructions on what to configure to get project started after copying
-  * directory structure laid out correctly
   * README, INSTALL etc boilerplate files
   * settings.py ready for Django 1.3 logging etc
-  * wsgi script for fastcgi to run
   * staging header in place
-  * default base.html and main.scss
-  * example entry for vhosts.pl with all exec scripts needed to deploy
+  * mySociety banner to the header/footer
 
 Final touches:
 

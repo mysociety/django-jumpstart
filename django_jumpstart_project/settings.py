@@ -165,8 +165,8 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django_bcrypt',
     
-    # 'registration_defaults',
-    # 'registration',
+    'registration_defaults',
+    'registration',
     
     'django.contrib.admin',
     'django.contrib.admindocs',

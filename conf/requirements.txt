@@ -14,5 +14,9 @@ south
 django-bcrypt
 
 # Django related registration
-# django-registration
-# django-registration-defaults
+django-registration
+django-registration-defaults
+
+# The registration app is a little out of date - might be worth getting it from the repo direct....
+# -e hg+https://bitbucket.org/ubernostrum/django-registration@fad7080fe769#egg=django-registration
+

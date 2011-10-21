@@ -28,4 +28,10 @@ Make sure that you put something random into DJANGO_SECRET_KEY:
 
     $ tr -dc '[:alnum:]' < /dev/urandom | head -c${1:-64}; echo;
 
+== database ==
+
+Create your database:
+
+    $ createdb -T template_postgis django-jumpstart
+
 

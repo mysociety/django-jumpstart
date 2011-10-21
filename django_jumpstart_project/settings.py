@@ -6,7 +6,7 @@ import logging
 
 # Work out where we are to set up the paths correctly and load config
 base_dir = os.path.abspath( os.path.split(__file__)[0] + '/..' )
-print "base_dir: " + base_dir
+# print "base_dir: " + base_dir
 
 paths = (
     os.path.normpath(base_dir + "/pylib"),
@@ -168,8 +168,8 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django_bcrypt',
     
-    'registration_defaults',
-    'registration',
+    # 'registration_defaults',
+    # 'registration',
     
     'django.contrib.admin',
     'django.contrib.admindocs',

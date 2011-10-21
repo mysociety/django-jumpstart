@@ -34,7 +34,7 @@ WSGIDaemonProcess example.com \
 
 WSGIProcessGroup example.com
 
-WSGIScriptAlias / /data/vhost/example.com/mzalendo/wsgi/django.wsgi
+WSGIScriptAlias / /data/vhost/example.com/django-jumpstart/wsgi/django.wsgi
 
 
 

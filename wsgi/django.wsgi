@@ -3,6 +3,7 @@
 import os, sys
 
 paths = (
+    '../django_jumpstart_project',
     '../',
     '../pylib/',
     '../commonlib/pylib/',

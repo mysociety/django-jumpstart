@@ -9,13 +9,14 @@ base_dir = os.path.abspath( os.path.split(__file__)[0] + '/..' )
 # print "base_dir: " + base_dir
 
 paths = (
+    os.path.normpath(base_dir + "/"),
     os.path.normpath(base_dir + "/pylib"),
     os.path.normpath(base_dir + "/commonlib/pylib"),
 )
 
 for path in paths:
     if path not in sys.path:
-        sys.path.append(path)
+        sys.path.insert(0,path)
 
 # load the mySociety config
 from mysociety import config

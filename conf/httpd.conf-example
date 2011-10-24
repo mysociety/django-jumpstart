@@ -20,7 +20,7 @@
 
 Alias /media_root  /data/vhost/example.com/media_root
 Alias /media       /data/vhost/example.com/django-jumpstart-virtualenv/lib/python2.6/site-packages/django/contrib/admin/media
-Alias /static      /data/vhost/example.com/docs/static
+Alias /static      /data/vhost/example.com/collected_static
 Alias /robots.txt  /data/vhost/example.com/docs/robots.txt
 Alias /favicon.ico /data/vhost/example.com/docs/favicon.ico
 
@@ -35,6 +35,3 @@ WSGIDaemonProcess example.com \
 WSGIProcessGroup example.com
 
 WSGIScriptAlias / /data/vhost/example.com/django-jumpstart/wsgi/django.wsgi
-
-
-

@@ -3,7 +3,7 @@
 import os, sys
 
 paths = (
-    '../../',
+    '../',
     '../pylib/',
     '../commonlib/pylib/',
 )
@@ -21,7 +21,7 @@ if mysociety.config.get('STAGING'):
     wsgi_monitor.start(interval=1.0)
     # wsgi_monitor.track(os.path.join(os.path.dirname(__file__), 'site.cf'))
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'c4emptyhomes.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'django_jumpstart_project.settings'
 
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()

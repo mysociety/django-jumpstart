@@ -3,6 +3,9 @@
 # abort on any errors
 set -e
 
+# check that we are in the expected directory
+cd `dirname $0`/..
+
 # create/update the virtual environment
 pip install \
     -q \

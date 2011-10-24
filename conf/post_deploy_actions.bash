@@ -7,7 +7,7 @@ set -e
 pip install \
     -q \
     -E ../django-jumpstart-virtualenv \
-    -r conf/requirements.txt
+    -r requirements.txt
 
 # use the virtualenv just created/updated
 source ../django-jumpstart-virtualenv/bin/activate

@@ -12,11 +12,11 @@ pip install \
 # use the virtualenv just created/updated
 source ../django-jumpstart-virtualenv/bin/activate
 
-# go to the project directory for local config
-cd ./django_jumpstart_project
-
 # make sure that there is no old code (the .py files may have been git deleted) 
 find . -name '*.pyc' -delete
+
+# go to the project directory for local config
+cd ./django_jumpstart_project
 
 # get the database up to speed
 ./manage.py syncdb

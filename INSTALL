@@ -1,8 +1,9 @@
-Install instructions for django-jumpstart
+Installation instructions for django-jumpstart
 
 == virtualenv ==
 
-Get you virtual env setup so that you have all the dependencies installed:
+Get your virtual environment set up (using virtualenv) so that you have all the
+dependencies installed:
 
   $ virtualenv ../django-jumpstart-virtualenv --no-site-packages
   $ source ../django-jumpstart-virtualenv/bin/activate
@@ -10,8 +11,8 @@ Get you virtual env setup so that you have all the dependencies installed:
 
 == commonlib ==
 
-Get the commonlib submodule, which contains many useful bits used across
-mySociety projects:
+Optionally, get the commonlib submodule, which contains many useful bits used
+across mySociety projects:
 
     $ git submodule add git://git.mysociety.org/commonlib
     $ git submodule sync
@@ -36,5 +37,4 @@ Create your database:
     $ cd django_jumpstart_project
     $ ./manage syncdb
     $ ./manage migrate
-
 

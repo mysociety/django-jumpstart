@@ -7,10 +7,15 @@ set -e
 cd `dirname $0`/..
 
 # create/update the virtual environment
+
+# NOTE: some packages are difficult to install if they are not site packages,
+# for example xapian. If using these you might want to delete the
+# '--enable-site-packages' argument below.
 pip install \
-    -q \
-    -E ../django-jumpstart-virtualenv \
-    -r requirements.txt
+    --enable-site-packages \
+    --environment ../django-jumpstart-virtualenv \
+    --requirement requirements.txt \
+    --quiet
 
 # use the virtualenv just created/updated
 source ../django-jumpstart-virtualenv/bin/activate

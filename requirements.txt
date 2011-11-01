@@ -19,3 +19,8 @@ django-bcrypt
 -e hg+https://bitbucket.org/ubernostrum/django-registration@fad7080fe769#egg=django-registration
 django-registration-defaults
 
+### Xapian is a full text search engine, and haystack a django interface to it.
+### If you want to use this uncomment below, and probably delete the
+### '--enable-site-packages' argument in post_deploy_actions.bash
+# xapian-haystack
+# django-haystack

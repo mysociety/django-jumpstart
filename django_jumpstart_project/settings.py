@@ -5,22 +5,31 @@ import sys
 import logging
 
 # Work out where we are to set up the paths correctly and load config
-base_dir = os.path.abspath( os.path.split(__file__)[0] + '/..' )
-# print "base_dir: " + base_dir
+base_dir = os.path.abspath(
+    os.path.join(
+        os.path.dirname(__file__),
+        ".."
+        )
+    )
 
-paths = (
-    os.path.normpath(base_dir + "/"),
-    os.path.normpath(base_dir + "/pylib"),
-    os.path.normpath(base_dir + "/commonlib/pylib"),
+# Extras to add to sys.path
+# These should either be relative to base_dir,
+# or absolute (if you really have to...)
+extra_paths = (
+    "",
+    "pylib",
+    "commonlib/pylib",
 )
 
-for path in paths:
+extra_paths = (os.path.join(base_dir, path) for path in extra_paths)
+
+for path in extra_paths:
     if path not in sys.path:
-        sys.path.insert(0,path)
+        sys.path.insert(0, path)
 
 # load the mySociety config
 from mysociety import config
-config.set_file( base_dir + "/conf/general.yml" )
+config.set_file(os.path.join(base_dir, "conf/general.yml"))
 
 if int(config.get('STAGING')):
     STAGING = True
@@ -28,7 +37,7 @@ else:
     STAGING = False
 
 # switch on all debug when staging
-DEBUG          = STAGING
+DEBUG = STAGING
 TEMPLATE_DEBUG = STAGING
 
 ADMINS = (
@@ -73,7 +82,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.normpath( os.path.join( base_dir, "../media_root/") )
+MEDIA_ROOT = os.path.join(base_dir, "../media_root/")
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -84,7 +93,7 @@ MEDIA_URL = '/media_root/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.normpath( os.path.join( base_dir, "../collected_static/") )
+STATIC_ROOT = os.path.join(base_dir, "../collected_static/")
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -100,7 +109,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join( base_dir, "web/static/" ),
+    os.path.join(base_dir, "web/static/"),
 )
 
 # List of finder classes that know how to find static files in
@@ -142,7 +151,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join( base_dir, "django_jumpstart_project/templates" ),
+    os.path.join(base_dir, "django_jumpstart_project/templates"),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -224,9 +233,9 @@ LOGIN_REDIRECT_URL = '/'
 
 
 # pagination related settings
-PAGINATION_DEFAULT_PAGINATION      = 10
-PAGINATION_DEFAULT_WINDOW          = 2
-PAGINATION_DEFAULT_ORPHANS         = 2
+PAGINATION_DEFAULT_PAGINATION = 10
+PAGINATION_DEFAULT_WINDOW = 2
+PAGINATION_DEFAULT_ORPHANS = 2
 PAGINATION_INVALID_PAGE_RAISES_404 = True
 
 
@@ -234,6 +243,7 @@ PAGINATION_INVALID_PAGE_RAISES_404 = True
 MAPIT_URL = config.get('MAPIT_URL')
 
 # misc settings
-HTTPLIB2_CACHE_DIR = os.path.abspath( base_dir + '/../httplib2_cache' )
+HTTPLIB2_CACHE_DIR = os.path.join(base_dir, "../httplib2_cache")
+
 GOOGLE_ANALYTICS_ACCOUNT = config.get('GOOGLE_ANALYTICS_ACCOUNT')
 

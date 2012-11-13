@@ -1,0 +1,24 @@
+# general-example:
+# Example values for the "general" config file.
+#
+# Configuration parameters, in YAML syntax.
+#
+# Copy this file to one called "general.yml" in the same directory.  Or
+# have multiple config files and use a symlink to change between them.
+#
+# Copyright (c) 2012 UK Citizens Online Democracy. All rights reserved.
+
+{{ project_name|upper }}_DB_HOST: 'localhost'
+{{ project_name|upper }}_DB_PORT: '5432'
+{{ project_name|upper }}_DB_USER: ''
+{{ project_name|upper }}_DB_NAME: ''
+{{ project_name|upper }}_DB_PASS: ''
+
+STAGING: '1'
+
+TIME_ZONE: 'Europe/London'
+DJANGO_SECRET_KEY: '{{ secret_key }}'
+
+# create an account and then put the 'UA-123456-1' bit here. If present it will
+# be used in the templates.
+GOOGLE_ANALYTICS_ACCOUNT: ''

@@ -20,9 +20,9 @@ config_path = os.path.abspath( os.path.join( os.path.dirname(__file__), '..', 'c
 config = yaml.load(open(config_path))
 
 if int(config.get('STAGING')):
-    import spoke.wsgi_monitor
-    spoke.wsgi_monitor.start(interval=1.0)
-    spoke.wsgi_monitor.track(config_path)
+    import {{ project_name }}.wsgi_monitor
+    {{ project_name }}.wsgi_monitor.start(interval=1.0)
+    {{ project_name }}.wsgi_monitor.track(config_path)
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "{{ project_name }}.settings")
 

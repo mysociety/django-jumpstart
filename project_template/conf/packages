@@ -6,3 +6,8 @@ python-virtualenv
 # Some dependencies in requirements.txt are listed as repos, so we need the
 # various repo management tools to fetch them
 # mercurial
+
+# Database stuff
+postgresql
+python-psycopg2
+libpq-dev

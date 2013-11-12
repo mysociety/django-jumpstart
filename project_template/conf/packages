@@ -9,5 +9,5 @@ python-virtualenv
 
 # Database stuff
 postgresql
-python-psycopg2
+# libpq-dev is needed to build the psycopg2 package in requirements.txt
 libpq-dev

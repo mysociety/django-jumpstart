@@ -10,7 +10,7 @@ cd `dirname $0`/..
 # NOTE: some packages are difficult to install if they are not site packages,
 # for example xapian. If using these you might want to add the
 # '--enable-site-packages' argument.
-virtualenv --no-site-packages ../virtualenv-{{ project_name }}
+virtualenv ../virtualenv-{{ project_name }}
 source ../virtualenv-{{ project_name }}/bin/activate
 pip install --requirement requirements.txt
 

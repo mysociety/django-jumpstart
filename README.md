@@ -1,3 +1,13 @@
+This project is deprecated
+==========================
+
+Please see: https://github.com/mysociety/django-project-template and
+https://github.com/mysociety/django-app-template for more up to date templates
+and instructions
+
+Old instructions for posterity
+------------------------------
+
 This project is intended to be a template to base mySociety Django projects on.
 It is not meant to be deployable on its own.
 
